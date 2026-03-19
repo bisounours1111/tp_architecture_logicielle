@@ -75,6 +75,18 @@ Les ports sont externalisés via le Config Server dans le dépôt Git référenc
 - suspension automatique d'un membre quand son quota de réservations actives est atteint
 - désuspension automatique quand une réservation est libérée
 
+## Tests API
+
+Un script Python `test_complete_api.py`, généré avec l'aide d'une IA, permet de couvrir de manière automatisée l'ensemble des tests fonctionnels exposés par les services via l'API Gateway.
+
+Ce script vérifie notamment les routes CRUD, les règles métier de réservation, les quotas de membres, ainsi que les propagations Kafka visibles depuis l'API.
+
+Pour l'exécuter depuis le dossier parent de `TP` :
+
+```bash
+python3 test_complete_api.py
+```
+
 ## Design Pattern
 
 Le fichier `DESIGN_PATTERN.md` justifie l'utilisation du State Pattern dans `reservation-service` pour gérer le cycle de vie d'une réservation.
