@@ -183,15 +183,15 @@ Envoyez votre dépôt git contenant :
 
 ### Barème
 
-| Critère | Points |
-|---------|--------|
-| Infrastructure (Config Server, Eureka, Gateway) fonctionnelle | /3 |
-| Room Service — CRUD + règles de disponibilité | /3 |
-| Member Service — CRUD + gestion des quotas et suspension | /3 |
-| Reservation Service — création avec validations cross-service | /3 |
-| Kafka — propagation suppression salle et membre | /2 |
-| Kafka — gestion suspension/désuspension du membre | /2 |
-| Design Pattern pertinent et justifié | /2 |
-| Documentation Swagger | /1 |
-| Qualité du code et structure du projet | /1 |
-| **Total** | **/20** |
+| Critère                                                       | Points  |
+| ------------------------------------------------------------- | ------- |
+| Infrastructure (Config Server, Eureka, Gateway) fonctionnelle | /3      |
+| Room Service — CRUD + règles de disponibilité                 | /3      |
+| Member Service — CRUD + gestion des quotas et suspension      | /3      |
+| Reservation Service — création avec validations cross-service | /3      |
+| Kafka — propagation suppression salle et membre               | /2      |
+| Kafka — gestion suspension/désuspension du membre             | /2      |
+| Design Pattern pertinent et justifié                          | /2      |
+| Documentation Swagger                                         | /1      |
+| Qualité du code et structure du projet                        | /1      |
+| **Total**                                                     | **/20** |
