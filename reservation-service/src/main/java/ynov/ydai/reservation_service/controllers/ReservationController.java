@@ -26,14 +26,23 @@ public class ReservationController {
         return reservationService.getAllReservations();
     }
 
+    @GetMapping("/{id}")
+    @Operation(summary = "Get reservation by ID")
+    public ResponseEntity<Reservation> getReservationById(@PathVariable Long id) {
+        try {
+            return ResponseEntity.ok(reservationService.getReservationById(id));
+        } catch (RuntimeException e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
     @PostMapping
     @Operation(summary = "Create a new reservation (checks room availability and member status via REST)")
     public ResponseEntity<?> createReservation(@RequestBody Reservation reservation) {
         try {
             return ResponseEntity.ok(reservationService.createReservation(reservation));
         } catch (Exception e) {
-            e.printStackTrace(); // Pour voir l'erreur réelle dans la console
-            return ResponseEntity.status(500).body("Erreur lors de la réservation : " + e.getMessage());
+            return ResponseEntity.badRequest().body("Erreur lors de la réservation : " + e.getMessage());
         }
     }
 
