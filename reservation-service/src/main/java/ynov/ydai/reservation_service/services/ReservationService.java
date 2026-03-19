@@ -148,11 +148,11 @@ public class ReservationService {
     }
 
     private void validateRoomAvailabilityForSlot(Reservation reservation) {
-        boolean overlapExists = reservationRepository.existsOverlappingReservation(
+        boolean overlapExists = reservationRepository.hasOverlappingConfirmedReservation(
                 reservation.getRoomId(),
                 ReservationStatus.CONFIRMED,
-                reservation.getStartDateTime(),
-                reservation.getEndDateTime()
+                reservation.getEndDateTime(),
+                reservation.getStartDateTime()
         );
 
         if (overlapExists) {
